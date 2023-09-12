@@ -16,6 +16,10 @@ object question_5 {
       ("ddn@gmail.com"),
       ("psalunke@rediff.com")).toDF("email")
 
+    val df = Seq((1,"table"),(2,"chair"),(3,null),(4,"mouse")).toDF("p_id","p_name")
+
     df_col.filter(col("email").endsWith("@gmail.com")).show()
+
+    df.filter(col("p_name").isNotNull).show()
   }
 }
