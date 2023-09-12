@@ -23,13 +23,16 @@ def main(args:Array[String]):Unit={
     (34,70000)).toDF("age","income")
 
   val df2 = List(
-    (1, 85, 100),
-    (2, 20, 200),
-    (3, 30, 300),
-    (4, 10, 400),
-    (5, 10, 200),
-    (6, 5, 250),
-    (7, 110, 500)).toDF("product_id", "quantity","price")
+    (101, 85, 100),
+    (102, 20, 200),
+    (103, 30, 300),
+    (101, 10, 400),
+    (105, 10, 200),
+    (106, 5, 250),
+    (102, 110, 500)).toDF("transaction_id", "product_id","quantity")
+
+   val aaa = Seq(101,102,103)
+
 
 df.filter(col("age") > 30 && col("income") > 50000).show()
 
