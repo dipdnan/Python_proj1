@@ -6,6 +6,10 @@ import org.apache.spark.sql.functions.col
 object question_5 {
 
   def main(args:Array[String]):Unit={
+/*5)Given a DataFrame df containing customer data with a column email, filter and display the
+rows where the email ends with "@example.com."
+Given a DataFrame df containing product data with columns product_id and product_name,
+filter and display the rows where the product_name is not null.*/
 
     val ss = new SparkSession.Builder().appName("Bigdata_Developer").master("local[*]").getOrCreate()
     import ss.implicits._
