@@ -23,27 +23,18 @@ last 7 days). Use window functions for this task.*/
     (5, 101, "2023-09-07 16:00:00", 7)
   ).toDF("order_id","product_id","order_date","quantity")
 
-  // Define a window specification over the product_id and ordered by order_date
   val windowSpec = Window.partitionBy("product_id").orderBy("order_date")
 
-  // Calculate the average quantity over the last 7 days using a range-based window
-  val avgQuantityLast7Days = avg(col("quantity")).over(windowSpec.rangeBetween(-6, 0))  // This defines the 7-day window (0 is the current row)
+
+  val avgQuantityLast7Days = avg(col("quantity")).over(windowSpec.rangeBetween(-6, 0))
+  // This defines the 7-day window (0 is the current row)
+
+   val dfWithAvgQuantity = data.withColumn("avg_quantity_last_7_days", avgQuantityLast7Days)
+
+   val result = dfWithAvgQuantity.filter(col("quantity") > col("avg_quantity_last_7_days"))
+
+   result.show()
 
 
-  // Add a new column with the average quantity over the last 7 days
-  val dfWithAvgQuantity = data.withColumn("avg_quantity_last_7_days", avgQuantityLast7Days)
-
-  // Filter rows where quantity is greater than the average quantity over the last 7 days
-  val result = dfWithAvgQuantity.filter(col("quantity") > col("avg_quantity_last_7_days"))
-
-  // Show the resulting DataFrame
-  result.show()
-
-//  df.filter(col("quantity") > col(avg("quantity")).show()
-
-//  val a = df.withColumn("new_col",
-//    when(col("quantity")> avg(col("quantity")),"avg_sal"))
-
-//  a.show()
 }
 }
