@@ -7,8 +7,20 @@
 		revision="0.1.0-SNAPSHOT"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20230808083736"/>
+		date="20231108085327"/>
 	<dependencies>
+		<module organisation="org.apache.spark" name="spark-avro_2.11">
+			<revision name="2.4.4" status="release" pubdate="20190828042525" resolver="public" artresolver="public" homepage="http://spark.apache.org/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="158">
+				<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="successful" details="" size="13526" time="878" location="C:\Users\Ganesh\.ivy2\cache\org.apache.spark\spark-avro_2.11\ivy-2.4.4.xml" searched="true" original-local-location="C:\Users\Ganesh\.ivy2\cache\org.apache.spark\spark-avro_2.11\ivy-2.4.4.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/spark/spark-avro_2.11/2.4.4/spark-avro_2.11-2.4.4.pom"/>
+				<caller organisation="spark_proj1" name="spark_proj1_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.4.4" rev-constraint-default="2.4.4" rev-constraint-dynamic="2.4.4" callerrev="0.1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="spark-avro_2.11" type="jar" ext="jar" status="successful" details="" size="187318" time="1182" location="C:\Users\Ganesh\.ivy2\cache\org.apache.spark\spark-avro_2.11\jars\spark-avro_2.11-2.4.4.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/spark/spark-avro_2.11/2.4.4/spark-avro_2.11-2.4.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.apache.spark" name="spark-sql_2.11">
 			<revision name="2.4.4" status="release" pubdate="20190828042828" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spark.apache.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="130">
 				<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
@@ -95,9 +107,9 @@
 			</revision>
 		</module>
 		<module organisation="org.slf4j" name="slf4j-api">
-			<revision name="1.7.25" status="release" pubdate="20170316220632" resolver="public" artresolver="public" homepage="http://www.slf4j.org" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="154">
+			<revision name="1.7.25" status="release" pubdate="20170316220632" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="154">
 				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="successful" details="" size="3833" time="950" location="C:\Users\Ganesh\.ivy2\cache\org.slf4j\slf4j-api\ivy-1.7.25.xml" searched="true" original-local-location="C:\Users\Ganesh\.ivy2\cache\org.slf4j\slf4j-api\ivy-1.7.25.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom"/>
+				<metadata-artifact status="no" details="" size="5250" time="0" location="C:\Users\Ganesh\.ivy2\cache\org.slf4j\slf4j-api\ivy-1.7.25.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom"/>
 				<caller organisation="org.apache.arrow" name="arrow-memory" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="0.10.0"/>
 				<caller organisation="org.slf4j" name="jul-to-slf4j" conf="compile, runtime" rev="1.7.16" rev-constraint-default="1.7.16" rev-constraint-dynamic="1.7.16" callerrev="1.7.16"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="compile, runtime" rev="1.7.5" rev-constraint-default="1.7.5" rev-constraint-dynamic="1.7.5" callerrev="2.6.5"/>
@@ -131,14 +143,14 @@
 				<caller organisation="org.apache.hadoop" name="hadoop-mapreduce-client-common" conf="compile, runtime" rev="1.7.5" rev-constraint-default="1.7.5" rev-constraint-dynamic="1.7.5" callerrev="2.6.5"/>
 				<caller organisation="org.apache.arrow" name="arrow-vector" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="0.10.0"/>
 				<artifacts>
-					<artifact name="slf4j-api" type="jar" ext="jar" status="successful" details="" size="41203" time="1238" location="C:\Users\Ganesh\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.25.jar">
+					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="41203" time="0" location="C:\Users\Ganesh\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.25.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
-			<revision name="1.7.22" status="release" pubdate="20161213223525" resolver="public" artresolver="public" evicted="latest-revision" evicted-reason="" homepage="http://www.slf4j.org" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+			<revision name="1.7.22" status="release" pubdate="20161213223525" resolver="sbt-chain" artresolver="sbt-chain" evicted="latest-revision" evicted-reason="" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
 				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="successful" details="" size="2775" time="952" location="C:\Users\Ganesh\.ivy2\cache\org.slf4j\slf4j-api\ivy-1.7.22.xml" searched="true" original-local-location="C:\Users\Ganesh\.ivy2\cache\org.slf4j\slf4j-api\ivy-1.7.22.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.22/slf4j-api-1.7.22.pom"/>
+				<metadata-artifact status="no" details="" size="5250" time="0" location="C:\Users\Ganesh\.ivy2\cache\org.slf4j\slf4j-api\ivy-1.7.22.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.22/slf4j-api-1.7.22.pom"/>
 				<evicted-by rev="1.7.25"/>
 				<caller organisation="org.slf4j" name="jul-to-slf4j" conf="compile, runtime" rev="1.7.16" rev-constraint-default="1.7.16" rev-constraint-dynamic="1.7.16" callerrev="1.7.16"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="compile, runtime" rev="1.7.5" rev-constraint-default="1.7.5" rev-constraint-dynamic="1.7.5" callerrev="2.6.5"/>
@@ -173,9 +185,9 @@
 				<artifacts>
 				</artifacts>
 			</revision>
-			<revision name="1.7.16" status="release" pubdate="20160212015603" resolver="public" artresolver="public" evicted="latest-revision" evicted-reason="" homepage="http://www.slf4j.org" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+			<revision name="1.7.16" status="release" pubdate="20160212015603" resolver="sbt-chain" artresolver="sbt-chain" evicted="latest-revision" evicted-reason="" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
 				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="successful" details="" size="2775" time="962" location="C:\Users\Ganesh\.ivy2\cache\org.slf4j\slf4j-api\ivy-1.7.16.xml" searched="true" original-local-location="C:\Users\Ganesh\.ivy2\cache\org.slf4j\slf4j-api\ivy-1.7.16.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.pom"/>
+				<metadata-artifact status="no" details="" size="5250" time="0" location="C:\Users\Ganesh\.ivy2\cache\org.slf4j\slf4j-api\ivy-1.7.16.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.pom"/>
 				<evicted-by rev="1.7.22"/>
 				<caller organisation="org.slf4j" name="jul-to-slf4j" conf="compile, runtime" rev="1.7.16" rev-constraint-default="1.7.16" rev-constraint-dynamic="1.7.16" callerrev="1.7.16"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="compile, runtime" rev="1.7.5" rev-constraint-default="1.7.5" rev-constraint-dynamic="1.7.5" callerrev="2.6.5"/>
@@ -1429,6 +1441,7 @@
 				<metadata-artifact status="no" details="" size="79237" time="0" location="C:\Users\Ganesh\.ivy2\cache\org.apache.spark\spark-tags_2.11\ivy-2.4.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/spark/spark-tags_2.11/2.4.4/spark-tags_2.11-2.4.4.pom"/>
 				<caller organisation="org.apache.spark" name="spark-catalyst_2.11" conf="compile, runtime" rev="2.4.4" rev-constraint-default="2.4.4" rev-constraint-dynamic="2.4.4" callerrev="2.4.4"/>
 				<caller organisation="org.apache.spark" name="spark-sketch_2.11" conf="compile, runtime" rev="2.4.4" rev-constraint-default="2.4.4" rev-constraint-dynamic="2.4.4" callerrev="2.4.4"/>
+				<caller organisation="org.apache.spark" name="spark-avro_2.11" conf="default, compile, runtime, master" rev="2.4.4" rev-constraint-default="2.4.4" rev-constraint-dynamic="2.4.4" callerrev="2.4.4"/>
 				<caller organisation="org.apache.spark" name="spark-core_2.11" conf="default, compile, runtime, master" rev="2.4.4" rev-constraint-default="2.4.4" rev-constraint-dynamic="2.4.4" callerrev="2.4.4"/>
 				<caller organisation="org.apache.spark" name="spark-kvstore_2.11" conf="compile, runtime" rev="2.4.4" rev-constraint-default="2.4.4" rev-constraint-dynamic="2.4.4" callerrev="2.4.4"/>
 				<caller organisation="org.apache.spark" name="spark-sql_2.11" conf="default, compile, runtime, master" rev="2.4.4" rev-constraint-default="2.4.4" rev-constraint-dynamic="2.4.4" callerrev="2.4.4"/>
@@ -1448,6 +1461,7 @@
 				<caller organisation="org.apache.spark" name="spark-catalyst_2.11" conf="compile, runtime" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="2.4.4"/>
 				<caller organisation="org.apache.spark" name="spark-network-common_2.11" conf="compile, runtime" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="2.4.4"/>
 				<caller organisation="org.apache.spark" name="spark-sketch_2.11" conf="compile, runtime" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="2.4.4"/>
+				<caller organisation="org.apache.spark" name="spark-avro_2.11" conf="default, compile, runtime, master" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="2.4.4"/>
 				<caller organisation="org.apache.spark" name="spark-core_2.11" conf="default, compile, runtime, master" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="2.4.4"/>
 				<caller organisation="org.apache.spark" name="spark-tags_2.11" conf="compile, runtime" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="2.4.4"/>
 				<caller organisation="org.apache.spark" name="spark-kvstore_2.11" conf="compile, runtime" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="2.4.4"/>
@@ -1475,9 +1489,9 @@
 			</revision>
 		</module>
 		<module organisation="org.slf4j" name="slf4j-log4j12">
-			<revision name="1.7.16" status="release" pubdate="20160212015635" resolver="public" artresolver="public" homepage="http://www.slf4j.org" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="45">
+			<revision name="1.7.16" status="release" pubdate="20160212015635" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="45">
 				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="successful" details="" size="909" time="952" location="C:\Users\Ganesh\.ivy2\cache\org.slf4j\slf4j-log4j12\ivy-1.7.16.xml" searched="true" original-local-location="C:\Users\Ganesh\.ivy2\cache\org.slf4j\slf4j-log4j12\ivy-1.7.16.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-log4j12/1.7.16/slf4j-log4j12-1.7.16.pom"/>
+				<metadata-artifact status="no" details="" size="5329" time="0" location="C:\Users\Ganesh\.ivy2\cache\org.slf4j\slf4j-log4j12\ivy-1.7.16.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-log4j12/1.7.16/slf4j-log4j12-1.7.16.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-mapreduce-client-app" conf="compile, runtime" rev="1.7.5" rev-constraint-default="1.7.5" rev-constraint-dynamic="1.7.5" callerrev="2.6.5"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-mapreduce-client-shuffle" conf="compile, runtime" rev="1.7.5" rev-constraint-default="1.7.5" rev-constraint-dynamic="1.7.5" callerrev="2.6.5"/>
 				<caller organisation="org.apache.zookeeper" name="zookeeper" conf="compile, runtime" rev="1.6.1" rev-constraint-default="1.6.1" rev-constraint-dynamic="1.6.1" callerrev="3.4.6"/>
@@ -1488,7 +1502,7 @@
 				<caller organisation="org.apache.hadoop" name="hadoop-auth" conf="compile, runtime" rev="1.7.5" rev-constraint-default="1.7.5" rev-constraint-dynamic="1.7.5" callerrev="2.6.5"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-mapreduce-client-common" conf="compile, runtime" rev="1.7.5" rev-constraint-default="1.7.5" rev-constraint-dynamic="1.7.5" callerrev="2.6.5"/>
 				<artifacts>
-					<artifact name="slf4j-log4j12" type="jar" ext="jar" status="successful" details="" size="9939" time="1031" location="C:\Users\Ganesh\.ivy2\cache\org.slf4j\slf4j-log4j12\jars\slf4j-log4j12-1.7.16.jar">
+					<artifact name="slf4j-log4j12" type="jar" ext="jar" status="no" details="" size="9939" time="0" location="C:\Users\Ganesh\.ivy2\cache\org.slf4j\slf4j-log4j12\jars\slf4j-log4j12-1.7.16.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-log4j12/1.7.16/slf4j-log4j12-1.7.16.jar"/>
 					</artifact>
 				</artifacts>
