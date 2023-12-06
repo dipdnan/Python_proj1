@@ -27,6 +27,7 @@ object scenrio_2 {
         .when(col("Score")> 70 && (col("Score")<=89),"B")
         .when(col("Score")<= 70 , "C"))
 
-      abc.show()
+        abc.show()
+    scala.io.StdIn.readLine()
   }
 }

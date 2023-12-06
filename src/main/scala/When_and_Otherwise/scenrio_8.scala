@@ -22,9 +22,6 @@ object scenrio_8 {
           when(col("First_Name").isNull || col("Last_Name").isNull,"Unknown")
             .otherwise(concat(col("First_Name"),lit(" "),col("Last_Name")))
         )
-
-
-
     dfrdd.show()
 
 

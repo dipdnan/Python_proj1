@@ -25,15 +25,5 @@ object scenrio_15 {
           .otherwise("Unknown"))
 
          aa.show()
-
-
-
-
-
-
-
-
-
-
   }
 }

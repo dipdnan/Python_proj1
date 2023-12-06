@@ -37,10 +37,10 @@ filter and display the rows where the quantity is greater than 10.  */
     //df.filter(col("Last_nm").contains("Nanaware")).show()
     df.filter(col("last_nm")=== "Nanaware").show()
 
-//  val aa = df.select(when(col("last_nm")==="Nanaware","present").as("Last_Name"))
-//  aa.show()
+  val aa = df.select(when(col("last_nm")==="Nanaware","present").as("Last_Name"))
+  aa.show()
 
-//   df2.filter(col("quantity") > 10).show()
+   df2.filter(col("quantity") > 10).show()
 
   }
 }

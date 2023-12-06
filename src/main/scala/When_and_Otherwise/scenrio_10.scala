@@ -33,7 +33,5 @@ object scenrio_10 {
 
     aa.show()
 
-
-
   }
 }

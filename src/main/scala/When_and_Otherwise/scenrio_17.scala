@@ -33,15 +33,5 @@ object scenrio_17 {
 //        .agg(sum("revenue").alias("Total_Revenue"))
 //        .orderBy(desc("Total_Revenue")))
     aa.show()
-
-
-
-
-
-
-
-
-
-
   }
 }

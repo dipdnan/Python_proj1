@@ -7,22 +7,24 @@ import org.apache.spark.sql.functions.{col, when, _}
 package When_and_Otherwise
 {
 object scenior_1 {
+  def main(args: Array[String]): Unit = {
 
-def main(args:Array[String]):Unit= {
+    val ss = new SparkSession.Builder().appName("Bigdata_Developer")
+      .master("local[*]").getOrCreate()
+    import ss.implicits._
 
-  val ss = new SparkSession.Builder().appName("Bigdata_Developer").master("local[*]").getOrCreate()
-  import ss.implicits._
+    //    val aa = Seq(("Deepak",35),("Akshay",29),("Vijay",25),("Nitin",31),("Indrajeet",30)).toDF("Name","Age")
 
-  //    val aa = Seq(("Deepak",35),("Akshay",29),("Vijay",25),("Nitin",31),("Indrajeet",30)).toDF("Name","Age")
+    val ab = Seq((25, "Male"), (16, "Male"), (10, "Female"), (21, "Male"),
+      (18, "Female")).toDF("age", "gender")
 
-  val ab = Seq((25, "Male"), (16, "Male"), (10, "Female"), (21, "Male"), (18, "Female")).toDF("age", "gender")
+    val new_col = ab.withColumn("is_adult",
+      when(col("age") >= 18, "TRUE")
+        .otherwise("FALSE"))
 
-  val new_col = ab.withColumn("is_adult",
-                when(col("age") >= 18, "TRUE")
-                .otherwise("FALSE"))
+    new_col.show()
 
-           new_col.show()
-}
-
+    scala.io.StdIn.readLine()
+  }
   }
 }

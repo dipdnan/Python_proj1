@@ -11,7 +11,8 @@ def main(args:Array[String]):Unit={
     (5,"B",200),(5,"B",200),(5,"B",200),(5,"B",200),
     (5,"B",200),(10,"AB",120)).toDF("ID","NAME","SALARY")
 
-  val data2 = List((1,"A",100),(2,"AA",110),(3,"B",200),(5,"AB",120)).toDF("ID", "NAME_1", "SALARY_1")
+  val data2 = List((1,"A",100),(2,"AA",110),(3,"B",200),(5,"AB",120)).
+    toDF("ID", "NAME_1", "SALARY_1")
 
   val data1_df = spark.sparkContext.broadcast(data1)
 
@@ -20,6 +21,7 @@ def main(args:Array[String]):Unit={
 
   reslt_df.show()
 
-  spark.stop()
+  scala.io.StdIn.readLine()
+
 }
 }
