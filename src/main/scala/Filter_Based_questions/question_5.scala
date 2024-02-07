@@ -1,7 +1,7 @@
 package Filter_Based_questions
 
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.functions.col
+import org.apache.spark.sql.functions.{col, desc}
 
 object question_5 {
 
@@ -25,5 +25,6 @@ filter and display the rows where the product_name is not null.*/
     df_col.filter(col("email").endsWith("@gmail.com")).show()
 
     df.filter(col("p_name").isNotNull).show()
+    df.orderBy(desc("p_id")).take(2)
   }
 }

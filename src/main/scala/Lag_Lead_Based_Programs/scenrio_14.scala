@@ -20,8 +20,7 @@ def main(args:Array[String]):Unit={
 
      val windowSpec = Window.partitionBy("id").orderBy(desc("salary"))
 
-     data
-    .withColumn("Rank_of_Salary", rank().over(windowSpec))
+     data.withColumn("Rank_of_Salary", rank().over(windowSpec))
     .show()
     }
 }
