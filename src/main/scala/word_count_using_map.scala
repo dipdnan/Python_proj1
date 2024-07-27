@@ -2,7 +2,8 @@ import org.apache.spark.SparkContext
 import org.apache.spark.sql.catalyst.dsl.expressions.doubleToLiteral
 import org.apache.spark.storage.StorageLevel
 
-object word_count_using_map {
+object
+word_count_using_map {
 
   def main(args:Array[String]):Unit={
 

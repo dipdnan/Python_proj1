@@ -20,9 +20,17 @@ def main(args:Array[String]):Unit={
    val aggdf = book_issued.groupBy("student_id","student_name")
      .agg(functions.concat_ws(";",functions.collect_list("book_issue"))
        .alias("book_issued"))
-
-   aggdf.show()
+  val sortedDF = aggdf.orderBy($"student_id".asc)
+  sortedDF.show()
 
    scala.io.StdIn.readLine()
    
 }}
+/* Output :
++----------+------------+--------------------+
+|student_id|student_name|         book_issued|
++----------+------------+--------------------+
+|       101|        Mark|White Tiger;Bhaga...|
+|       102|         Ria|The Fountainhead;...|
+|       103|         Loi|    The Fountainhead|
++----------+------------+--------------------+  */

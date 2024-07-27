@@ -11,3 +11,7 @@ def main(args:Array[String]):Unit={
 
 }
 }
+/*
+Output :
+List((1,a), (2,b), (3,c))
+ */

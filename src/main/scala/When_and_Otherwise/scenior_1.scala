@@ -28,3 +28,14 @@ object scenior_1 {
   }
   }
 }
+/* Output :
++---+------+--------+
+|age|gender|is_adult|
++---+------+--------+
+| 25|  Male|    TRUE|
+| 16|  Male|   FALSE|
+| 10|Female|   FALSE|
+| 21|  Male|    TRUE|
+| 18|Female|    TRUE|
++---+------+--------+
+ */

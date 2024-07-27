@@ -51,3 +51,11 @@ def main(args:Array[String]):Unit={
 
   scala.io.StdIn.readLine()
 }}
+/* Output :
++------+
+|emp_id|
++------+
+|   444|
+|   124|
++------+
+ */

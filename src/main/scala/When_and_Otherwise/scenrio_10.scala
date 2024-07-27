@@ -22,7 +22,7 @@ object scenrio_10 {
 
     val aa = df.withColumn("customer_type",
 
-         when(col("age") < 25 && col("income") >=50000 ,"Young High-Income")
+         when(col("age") <= 25 && col("income") >=50000 ,"Young High-Income")
 
          .when(col("age") > 25 && col("age") <=60 && col("income") >=50000,
            "Middle-Aged High-Income")

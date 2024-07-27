@@ -11,7 +11,7 @@ def main(args:Array[String]):Unit={
   val spark = new SparkSession.Builder().appName("SparkWebUI").master("local[*]").getOrCreate()
   import spark.implicits._
 
-  val data = List(
+  val data = Seq(
     (1, "deepak", 20000, "Pune"),
     (2, "sandip", 50000, "hyd"),
     (3, "munna", 90000, "mumbai"),

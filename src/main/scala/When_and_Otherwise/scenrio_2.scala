@@ -31,3 +31,15 @@ object scenrio_2 {
     scala.io.StdIn.readLine()
   }
 }
+/* Output :
++-----+---------+-----+
+|Score| Subjects|Grade|
++-----+---------+-----+
+|   95|    Maths|    A|
+|   89|Geography|    B|
+|   70|  History|    C|
+|   65|   Polity|    C|
+|   50| Physices|    C|
+|   90|Chemistry|    A|
++-----+---------+-----+
+ */
